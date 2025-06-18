@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>OPAG Rice Section - Submit Reports</title>
+<link rel="stylesheet" href="styles.css" />
+<style>
+  /* Add this CSS to your styles.css or inside a <style> tag */
+  .header-flex {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .header-flex h1 {
+    margin: 0;
+  }
+</style>
+</head>
+<body>
+<header>
+  <div class="header-flex">
+    <img src="logo opag.png" alt="OPAG Logo" width="60" height="60" style="border-radius:50%; margin-top:5px;">
+    <h1>OPAG Rice Section</h1>
+  </div>
+</header>
+<nav>
+  <a href="index.html">Home</a>
+  <a href="news.html">News & Updates</a>
+  <a href="submit.html" class="active">Submit Reports</a>
+  <a href="prtf.html">PRTF 2025</a>
+  <a href="login.html">Login</a>
+  <a href="signup.html">Sign Up</a>
+  <a href="contact.html">Contact Us</a>
+</nav>
+<main>
+  <section id="submit">
+    <h2>Submit Reports</h2>
+    <form>
+      <label for="name">Name:</label><br>
+      <input type="text" id="name" name="name" placeholder="Your full name" required><br><br>
+      
+      <label for="email">Email:</label><br>
+      <input type="email" id="email" name="email" placeholder="your.email@example.com" required><br><br>
+      
+      <label for="report">Report Details:</label><br>
+      <textarea id="report" name="report" rows="5" placeholder="Describe your report..." required></textarea><br><br>
+      
+      <button type="submit">Submit Report</button>
+    </form>
+  </section>
+</main>
+<footer>
+  <p>&copy; 2024 OPAG Rice Section | All rights reserved.</p>
+</footer>
+</body>
+</html>
