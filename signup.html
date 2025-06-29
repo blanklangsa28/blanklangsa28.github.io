@@ -1,57 +1,258 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>OPAG Rice Section - Sign Up</title>
-<link rel="stylesheet" href="styles.css" />
-<style>
-  /* Add this CSS to your styles.css or inside a <style> tag */
-  .header-flex {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-  }
-  .header-flex h1 {
-    margin: 0;
-  }
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rice</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #eabf2f82;
+      margin: 0;
+      padding: 0;
+      font-family: sans-serif;
+      height: 100%;
+    }
+
+    header {
+      color: #fff;
+      background-color: rgb(46, 228, 49);
+      font-size: 1.8rem;
+      font-weight: bold;
+      padding: 10px 20px;
+    }
+
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    ul li img {
+      width: 60px;
+      height: 60px;
+    }
+
+    li.signin {
+      color: black;
+      margin-left: auto;
+      font-size: 0.8rem;
+      padding-right: 20px;
+      padding-top: 10px;
+    }
+
+    section {
+      background-color: #fffaf0;
+      margin: 40px auto;
+      padding: 20px;
+      max-width: 500px;
+      width: 90%;
+      border-radius: 8px;
+      font-weight: bold;
+      font-size: 1.1rem;
+    }
+
+    h2 {
+      color: #556b2f;
+      border-bottom: 3px solid #ccc;
+      padding-bottom: 10px;
+      font-size: 1.8rem;
+    }
+
+    form {
+      background-color: #fffaf0;
+      color: blue;
+      border-radius: 8px;
+    }
+
+    label {
+      display: block;
+      margin-top: 15px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 8px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-family: 'Roboto', sans-serif;
+      font-size: 1rem;
+    }
+    input[type="date"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem; /* ≈ 16px */
+    }
+
+
+    button {
+      display: block;
+      margin: 20px auto;
+      color: #fff;
+      background-color: #7bb661;
+      padding: 10px 20px;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 1rem;
+      border: none;
+    }
+
+    button:hover {
+      background-color: #588c38;
+    }
+
+    footer {
+      text-align: center;
+      color: rgb(112, 107, 106);
+      font-size: 0.9rem;
+      padding: 20px 10px;
+    }
+
+    /* 📱 Responsive Styles */
+    @media (max-width: 768px) {
+      header {
+        font-size: 20px;
+        text-align: left;
+      }
+
+      ul {
+        flex-direction: row;
+        align-items: center;
+      }
+
+      ul li img {
+        width: 50px;
+        height: 50px;
+      }
+
+      section {
+        margin: 20px auto;
+        font-size: 15px;
+      }
+      h2{
+        font-size: 15px;
+      }
+      form{
+        font-size: 10px;
+      }
+
+      button {
+        font-size: 15px;
+      }
+      input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    textarea {
+      width: 100%;
+      padding: 6px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-family: 'Roboto', sans-serif;
+      font-size: 10px;
+    }
+    input[type="date"] {
+      font-size: 10px;
+      padding: 6px;
+      margin-top: 5px;
+    }
+    footer{
+        padding-top:40px ;
+        font-size: 10px;
+
+    }
+    }
+  </style>
 </head>
-<body>
-<header>
-  <div class="header-flex">
-    <img src="logo opag.png" alt="OPAG Logo" width="60" height="60" style="border-radius:50%; margin-top:5px;">
-    <h1>OPAG Rice Section</h1>
-  </div>
-</header>
-<nav>
-  <a href="index.html">Home</a>
-  <a href="news.html">News & Updates</a>
-  <a href="submit.html">Submit Reports</a>
-  <a href="prtf.html">PRTF 2025</a>
-  <a href="login.html">Login</a>
-  <a href="signup.html" class="active">Sign Up</a>
-  <a href="contact.html">Contact Us</a>
-</nav>
-<main>
-  <section id="signup">
+
+  <header>
+    <ul>
+      <li><img src="../logo opag.png" alt="OPAG Logo" /></li>
+      <li>OPAG Rice Section</li>
+    </ul>
+  </header>
+
+  <section id="login">
     <h2>Sign Up</h2>
     <form>
-      <label for="signup-name">Full Name:</label><br>
-      <input type="text" id="signup-name" placeholder="Your full name" required><br><br>
-      
-      <label for="signup-email">Email:</label><br>
-      <input type="email" id="signup-email" placeholder="your.email@example.com" required><br><br>
-      
-      <label for="signup-password">Password:</label><br>
-      <input type="password" id="signup-password" placeholder="Password" required><br><br>
-      
+      <label for="signup-firstname">First Name:</label><br>
+      <input type="text" id="signup-firstname" placeholder="Your first name" required><br><br>
+      <label for="signup-midname">Middle Name:</label><br>
+      <input type="text" id="signup-midname" placeholder="Your middle name" required><br><br>
+      <label for="signup-lastname">Last Name:</label><br>
+      <input type="text" id="signup-lastname" placeholder="Your last name" required><br><br>
+      <label for="signup-birthday">Birthday:</label><br>
+      <input type="date" id="signup-birthday" required><br><br>
+      <label for="signup-username">User Name:</label><br>
+      <input type="text" id="signup-username" placeholder="Your User name" required><br><br>
+      <label for="signup-email">Email:</label>
+      <input type="email" id="signup-email" placeholder="your.email@example.com" required />
+
+      <label for="signup-password">Password:</label>
+      <input type="password" id="signup-password" placeholder="Password" required />
+
       <button type="submit">Sign Up</button>
     </form>
   </section>
-</main>
-<footer>
-  <p>&copy; 2024 OPAG Rice Section | All rights reserved.</p>
-</footer>
+
+  <footer>
+    <p>&copy; 2024 OPAG Rice Section | All rights reserved.</p>
+  </footer>
+
+ <script>
+  document.querySelector('form').addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    const data = {
+      firstName: document.getElementById("signup-firstname").value.trim(),
+      middleName: document.getElementById("signup-midname").value.trim(),
+      lastName: document.getElementById("signup-lastname").value.trim(),
+      birthday: document.getElementById("signup-birthday").value,
+      username: document.getElementById("signup-username").value.trim(),
+      email: document.getElementById("signup-email").value.trim(), // ✅ match the HTML
+      password: document.getElementById("signup-password").value.trim()
+    };
+
+    fetch("https://script.google.com/macros/s/AKfycbzeDTZyhnStO9pSA2dWCCnP8557rVHKk4mnBXYoSiuAA42dPkrqIQv0K5j4LDuKff_T/exec", {
+      method: "POST",
+      body: JSON.stringify(data),
+      headers: {
+        "Content-Type": "application/json"
+      }
+    })
+    .then(response => {
+      if (response.ok) {
+        alert("✅ Signup successful!");
+        window.location.href = "login.html"; // Change this path if needed
+      } else {
+        alert("❌ Failed to submit. Please try again.");
+      }
+    })
+    .catch(error => {
+      console.error("Error:", error);
+      alert("❌ Error connecting to server.");
+    });
+  });
+</script>
+
+
+
+
+
+
 </body>
 </html>
